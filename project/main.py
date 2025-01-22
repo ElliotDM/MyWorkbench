@@ -1,14 +1,14 @@
 import sys
 from PyQt5.QtWidgets import QApplication
 from main_window import MainWindow
-from controller import MainController
-from connector import Connector
+from project.controller import Controller
+from project.connector import Connector
 
 def main():
     app = QApplication(sys.argv)
     window = MainWindow()
     connector = Connector()
-    controller = MainController(window, connector)
+    controller = Controller(window, connector)
     window.show()
     app.exit(app.exec_())
 
